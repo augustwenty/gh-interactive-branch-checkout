@@ -14,7 +14,7 @@ while( $run ); do
     let ctr++
   done
 
-  echo -n "Enter number of branch(es) to checkout (enter Q to quit): "
+  echo -n "Enter number of branch(es) to delete, enter 'Q' to quit [Q/#]: "
   read -a checkout
   checkout=${checkout:-Q}
   echo ""
