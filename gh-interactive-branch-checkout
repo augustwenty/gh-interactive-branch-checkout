@@ -4,7 +4,7 @@ echo "Hello gh-interactive-branch-checkout!"
 
 BRANCHES=()
 let ctr=0
-eval $(git for-each-ref --count=20 --sort=-committerdate --format='BRANCHES+=(%(refname:short))' refs/)
+eval $(git for-each-ref --count=20 --sort=-committerdate --format='BRANCHES+=(%(refname:short))' --no-merged=HEAD refs/)
 
 run=true
 while( $run ); do
